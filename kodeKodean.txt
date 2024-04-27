@@ -1,4 +1,4 @@
-///***gitbash [mompisisikan letak Folder]***\\\
+===========================///***gitbash [mompisisikan letak Folder]***\\\================================
 $ cd //mengembalikan posisi folder yang akan dijalankan*
 $ cd Desktop //Admin@gosmart MSYS ~/Desktop
 $ cd Belajar-NodeJs //Admin@gosmart MSYS ~/Desktop/belajar-nodejs
@@ -7,3 +7,71 @@ $ cd Belajar-NodeJs //Admin@gosmart MSYS ~/Desktop/belajar-nodejs
     $ pwd //Admin@gosmart MSYS ~/Desktop/belajar-nodejs/6-node-module-system
             /c/Users/Admin/Desktop/belajar-nodejs/6-node-module-system
 
+=========================///**Untuk mengalihkan ke email baru*\\\==========================================
+$ git config --global user.email <email_baru>
++++apabila error seperti ini, remove dulu+++
+error: remote origin already exists.
+remote: Permission to YudiMulya31/oneRepository.git denied to yudidoc31.
+fatal: unable to access 'https://github.com/YudiMulya31/oneRepository.git/': The requested URL returned error: 403
+Admin@gosmart MSYS ~/desktop/Belajar-nodeJS (main)
+$ git remote remove origin
++++dan push kembali+++
+$ git remote add origin git@github.com:YudiMulya31/oneRepository.git
+git branch -M main
+git push -u origin main
+
+==================//Cara push ke gitHub dengan SSHkey\\\==========================================================================
+Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest
+$ git config –global user.email
+
+Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest
+$ git init
+Initialized empty Git repository in C:/Users/Admin/Documents/drivetest/.git/
+
+Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (master)
+$ git add file1.txt
+
+Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (master)
+$ git commit -m "First lap"
+[master (root-commit) d8fafd3] First lap
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Admin/.ssh/id_rsa): kasih nama
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in ssh
+Your public key has been saved in ssh.pub
+The key fingerprint is:
+SHA256:0FbJx7bg3Nq3b7ON8yWobOqd5n4Jl5EGnrkrkS/0Vt0 Admin@DESKTOP-IJRP9PB
+The key's randomart image is:
++---[RSA 3072]----+
+|         ..o     |
+|       . .= +    |
+|      . o+ O o   |
+|       o  * *    |
+|        S. = + . |
+|        + + =.o E|
+|       . + =.o...|
+|        ooBoo o++|
+|       .oXB.  .**|
++----[SHA256]-----+
+
+Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (main)
+$ eval "$(ssh-agent -s)"
+Agent pid 875
+//
+jangan lupa masukan key.pub
+
+ke dalam github di akun/setting/ seperi dibawah ini:
+
+Lalu AddSSH Key.
+//
+Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (main)
+$ ssh-add (nama nu tadi)
+Identity added: ssh (Admin@DESKTOP-IJRP9PB)
+
+Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (main)
+$ git push -u origin main
