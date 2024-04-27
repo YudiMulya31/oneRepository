@@ -22,7 +22,7 @@ git push -u origin main
 
 ==================//Cara push ke gitHub dengan SSHkey\\\==========================================================================
 Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest
-$ git config –global user.email
+$ git config –global user.email (cocokan emailnya) atau $ git config --global user.email <email_baru>
 
 Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest
 $ git init
@@ -62,16 +62,39 @@ The key's randomart image is:
 Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (main)
 $ eval "$(ssh-agent -s)"
 Agent pid 875
-//
-jangan lupa masukan key.pub
 
-ke dalam github di akun/setting/ seperi dibawah ini:
+              //  const = jangan lupa masukan key.pub dan pindahkan jangan http tapi SSH di gitHubnya coy.
+              //  ke dalam github di akun/setting/ seperi dibawah ini:
+             //   Lalu AddSSH Key.
 
-Lalu AddSSH Key.
-//
 Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (main)
 $ ssh-add (nama nu tadi)
 Identity added: ssh (Admin@DESKTOP-IJRP9PB)
 
 Admin@DESKTOP-IJRP9PB MINGW64 ~/Documents/drivetest (main)
 $ git push -u origin main
+
+=========================///*Perubahan pada file dengan ciri huruf M warna oranye============================================push kembali===
+$ git add anu(name filenya yg akan di update)
+$ git commit -m "update no urut list"
+$ git push
+
+========================///git dengan tidak membuat ssh kembali\\\=======================================================================
+buat repo baru
+copikan SSHkey dari tugas sebelumnya yg ada diVsCode, misal: 1fuction&1fuction.pub
+pastekan di tugas baru(VsCode)
+$ git init
+$ git add anu(nma entryPoint)
+$ git status
+$ git commit -m "tugasLima"
+
+$ eval "$(ssh-agent -s)"
+Agent pid 2070
+
+$ ssh-add 1function
+Identity added: 1function (Admin@DESKTOP-IJRP9PB)
+
+$ git remote add origin git@github.com:yudidoc31/Task3.git
+git branch -M main
+git push -u origin main
+
