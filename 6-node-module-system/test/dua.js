@@ -1,0 +1,1 @@
+console.log(window.cetakNama('Yudi Moelya'));//lalu refresh di web sama saja

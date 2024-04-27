@@ -1,0 +1,9 @@
+///***gitbash [mompisisikan letak Folder]***\\\
+$ cd //mengembalikan posisi folder yang akan dijalankan*
+$ cd Desktop //Admin@gosmart MSYS ~/Desktop
+$ cd Belajar-NodeJs //Admin@gosmart MSYS ~/Desktop/belajar-nodejs
+    $ ls //melihat isi file dalam folder
+    $ ll //melihat lebih rinci isi file dalam folder
+    $ pwd //Admin@gosmart MSYS ~/Desktop/belajar-nodejs/6-node-module-system
+            /c/Users/Admin/Desktop/belajar-nodejs/6-node-module-system
+
